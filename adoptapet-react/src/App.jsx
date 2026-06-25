@@ -25,6 +25,7 @@ function App() {
 
     return coincideEspecie && coincideBusqueda
   })
+  const mascotasUrgentes = mascotasFiltradas.filter((mascota) => mascota.adopcionUrgente).length
 
   return (
     <main style={{ padding: '2rem', maxWidth: '1200px', margin: '0 auto' }}>
@@ -37,6 +38,35 @@ function App() {
           Revisa el listado de mascotas y su información principal.
         </p>
       </header>
+
+      <section
+        style={{
+          display: 'inline-flex',
+          alignItems: 'center',
+          gap: '0.6rem',
+          background: '#fff7ed',
+          color: '#9a3412',
+          border: '1px solid #fb923c',
+          borderRadius: '999px',
+          padding: '0.55rem 0.9rem',
+          fontWeight: 700,
+          marginBottom: '1rem',
+        }}
+      >
+        <span>Adopciones urgentes</span>
+        <span
+          style={{
+            background: '#9a3412',
+            color: 'white',
+            borderRadius: '999px',
+            padding: '0.2rem 0.55rem',
+            minWidth: '2rem',
+            textAlign: 'center',
+          }}
+        >
+          {mascotasUrgentes}
+        </span>
+      </section>
 
       <div style={{ display: 'grid', gap: '1rem', marginBottom: '1.5rem' }}>
         <FiltroEspecie valor={filtroEspecie} onChange={setFiltroEspecie} />

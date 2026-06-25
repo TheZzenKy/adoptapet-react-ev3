@@ -23,6 +23,7 @@ function ListaMascotas({ mascotas = [] }) {
           especie={mascota.especie}
           descripcion={mascota.descripcion}
           caracteristicas={mascota.caracteristicas}
+          adopcionUrgente={mascota.adopcionUrgente}
         />
       ))}
     </section>
@@ -39,6 +40,7 @@ ListaMascotas.propTypes = {
       especie: PropTypes.oneOf(['Perro', 'Gato', 'Otro']),
       descripcion: PropTypes.string,
       caracteristicas: PropTypes.arrayOf(PropTypes.string),
+      adopcionUrgente: PropTypes.bool,
     })
   ),
 }

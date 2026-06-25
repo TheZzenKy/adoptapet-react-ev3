@@ -1,5 +1,6 @@
 ETAPA 1: 
 No utilice IA para esta parte
+
 ETAPA 2:
 Ahora necesito que:
 El componente debe recibir por props: nombre, raza, edad, especie, descripcion,
@@ -36,3 +37,11 @@ Al igual el campo de búsqueda debe ser un componente controlado (su valor vive 
 Y valida y normaliza el texto de búsqueda (recorta espacios y limita el largo) antes de usarlo, para no confiar ciegamente en la entrada del usuario.
 
 Fue útil ya que se define el control, el manejo en caso de algo vacio y una regla para la entrada del usuario evitando conflictos en la busquedad.
+
+ETAPA 5:
+Como ultimo necesito que me:
+Resaltes visualmente los elementos con adopcionUrgente: true (por ejemplo, una etiqueta “URGENTE” o un borde distinto).
+Agregues un contador que muestre cuántas mascotas tienen adopción urgente.
+Y me verifiques que toda la app corre sin errores ni warnings en consola.
+
+Útil ya que se agrega una regla visual y se mejora la lectura visual sin cambiar la estructura base

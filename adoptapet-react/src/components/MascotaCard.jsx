@@ -25,20 +25,24 @@ function MascotaCard({
   especie = 'Otro',
   descripcion = 'Sin descripción disponible.',
   caracteristicas = [],
+  adopcionUrgente = false,
 }) {
   const especieVisual = especieConfig[especie] ?? especieConfig.Otro
   const listaCaracteristicas = Array.isArray(caracteristicas) ? caracteristicas : []
+  const bordeUrgente = adopcionUrgente ? '#dc2626' : especieVisual.accent
+  const fondoCabecera = adopcionUrgente ? 'rgba(220, 38, 38, 0.08)' : 'transparent'
 
   return (
     <article
       style={{
-        border: `1px solid ${especieVisual.accent}`,
+        border: `2px solid ${bordeUrgente}`,
         borderRadius: '18px',
         padding: '1.25rem',
         background: 'white',
         boxShadow: '0 12px 30px rgba(15, 23, 42, 0.08)',
         display: 'grid',
         gap: '1rem',
+        position: 'relative',
       }}
     >
       <header
@@ -47,6 +51,9 @@ function MascotaCard({
           justifyContent: 'space-between',
           gap: '1rem',
           alignItems: 'flex-start',
+          padding: '0.1rem 0.1rem 0.5rem',
+          background: fondoCabecera,
+          borderRadius: '12px',
         }}
       >
         <div>
@@ -65,19 +72,37 @@ function MascotaCard({
           <h3 style={{ margin: '0.25rem 0 0', fontSize: '1.4rem' }}>{nombre}</h3>
         </div>
 
-        <span
-          style={{
-            background: especieVisual.background,
-            color: especieVisual.accent,
-            borderRadius: '999px',
-            padding: '0.45rem 0.8rem',
-            fontWeight: 700,
-            fontSize: '0.9rem',
-            whiteSpace: 'nowrap',
-          }}
-        >
-          {especie}
-        </span>
+        <div style={{ display: 'grid', justifyItems: 'end', gap: '0.45rem' }}>
+          {adopcionUrgente ? (
+            <span
+              style={{
+                background: '#dc2626',
+                color: 'white',
+                borderRadius: '999px',
+                padding: '0.35rem 0.7rem',
+                fontWeight: 800,
+                fontSize: '0.78rem',
+                letterSpacing: '0.06em',
+              }}
+            >
+              URGENTE
+            </span>
+          ) : null}
+
+          <span
+            style={{
+              background: especieVisual.background,
+              color: especieVisual.accent,
+              borderRadius: '999px',
+              padding: '0.45rem 0.8rem',
+              fontWeight: 700,
+              fontSize: '0.9rem',
+              whiteSpace: 'nowrap',
+            }}
+          >
+            {especie}
+          </span>
+        </div>
       </header>
 
       <dl
@@ -145,6 +170,7 @@ MascotaCard.propTypes = {
   especie: PropTypes.oneOf(['Perro', 'Gato', 'Otro']),
   descripcion: PropTypes.string,
   caracteristicas: PropTypes.arrayOf(PropTypes.string),
+  adopcionUrgente: PropTypes.bool,
 }
 
 export default MascotaCard
