@@ -25,3 +25,14 @@ array).
 Y en App.jsx, renderiza ListaMascotas pasándole los datos importados.
 
 Esto fue útil ya que se definen los array por props asi mismo conectando desde app.jsx. Permitiendole el flujo completo
+
+ETAPA 4:
+Quiero que me implementes en:
+FiltroEspecia.jsx botones o un selector para filtrar por la especie: “Todas”, “Perro”, “Gato”, “Otro”.
+En App.jsx, usa useState para guardar el filtro seleccionado y un campo de búsqueda por nombre.
+También aplicame ambos filtros sobre el array antes de pasarlo a ListaMascotas.
+Usa un renderizado condicional para mostrar el mensaje “No hay mascotas que coincidan” cuando el resultado quede vacío.
+Al igual el campo de búsqueda debe ser un componente controlado (su valor vive en el estado de React).
+Y valida y normaliza el texto de búsqueda (recorta espacios y limita el largo) antes de usarlo, para no confiar ciegamente en la entrada del usuario.
+
+Fue útil ya que se define el control, el manejo en caso de algo vacio y una regla para la entrada del usuario evitando conflictos en la busquedad.
