@@ -1,0 +1,18 @@
+ETAPA 1: 
+No utilice IA para esta parte
+
+ETAPA 2:
+Ahora necesito que me:
+Crees src/components/MascotaCard.jsx.
+El componente debe recibir por props: nombre, raza, edad, especie, descripcion,
+caracteristicas.
+Tambien muestra la información de forma visual y ordenada.
+Y aplica un estilo diferenciado según la especie (un color/etiqueta distinto para Perro, Gato,
+Otro).
+Tambien que me definas los tipos de las props con PropTypes (o documenta claramente cada prop) y
+entrega valores por defecto para evitar errores cuando falte un dato.
+Renderizes el texto siempre como contenido JSX normal. No uses
+dangerouslySetInnerHTML.
+Y no dejes credenciales, claves ni datos sensibles escritos en el código.
+
+Esto fue útil ya que se define los datos de entrada y el comportamiento visual, dejando una regla clara.
