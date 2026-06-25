@@ -1,9 +1,7 @@
 ETAPA 1: 
 No utilice IA para esta parte
-
 ETAPA 2:
-Ahora necesito que me:
-Crees src/components/MascotaCard.jsx.
+Ahora necesito que:
 El componente debe recibir por props: nombre, raza, edad, especie, descripcion,
 caracteristicas.
 Tambien muestra la información de forma visual y ordenada.
@@ -16,3 +14,14 @@ dangerouslySetInnerHTML.
 Y no dejes credenciales, claves ni datos sensibles escritos en el código.
 
 Esto fue útil ya que se define los datos de entrada y el comportamiento visual, dejando una regla clara.
+
+
+ETAPA 3:
+A continuación necesito que me:
+Que ListaMascotas.jsx reciba el array de mascotas por props.
+Recorre el array con .map() y renderiza un MascotaCard por cada mascota.
+Tabmien asigna correctamente la prop key usando el id de cada elemento (no uses el índice del
+array).
+Y en App.jsx, renderiza ListaMascotas pasándole los datos importados.
+
+Esto fue útil ya que se definen los array por props asi mismo conectando desde app.jsx. Permitiendole el flujo completo
